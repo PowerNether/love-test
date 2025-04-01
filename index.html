@@ -1,9 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Страница профилей</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="wrapper">
+      <!-- Шапка -->
+      <header class="profiles__header">
+        <h1 class="profiles__title">Поиск пары</h1>
+        <div class="profiles__filter filter">
+          <span class="filter__toggler"></span>
+          <div class="filter__content">
+            <span class="filter__title">Сортировать по:</span>
+            <div class="filter__radio">
+              <input
+                id="sort-default"
+                type="radio"
+                value="default"
+                name="sort"
+                checked
+              />
+              <label for="sort-default">По умолчанию</label>
+            </div>
+            <div class="filter__radio">
+              <input id="sort-city" type="radio" value="city" name="sort" />
+              <label for="sort-city">По городу</label>
+            </div>
+            <div class="filter__radio">
+              <input id="sort-age" type="radio" value="age" name="sort" />
+              <label for="sort-age">По возрасту</label>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Список профилей -->
+      <div class="profiles__grid"></div>
+
+      <!-- Мобильная навигация -->
+      <nav class="navigation">
+        <a href="#" class="navigation__link">
+          <span class="navigation__icon navigation__icon-like"></span>
+        </a>
+        <a href="#" class="navigation__link">
+          <span class="navigation__icon navigation__icon-chat"></span>
+        </a>
+        <a href="#" class="navigation__link">
+          <span class="navigation__icon navigation__icon-wallet"></span>
+        </a>
+        <a href="#" class="navigation__link">
+          <span class="navigation__icon navigation__icon-search"></span>
+        </a>
+        <a href="#" class="navigation__link">
+          <span class="navigation__icon navigation__icon-close"></span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Шаблон профилей -->
+    <template id="profile-card-template">
+      <div class="profile-card">
+        <div class="profile-card__preview">
+          <img src="" loading="lazy" class="profile-card__image" />
+          <div class="profile-card__overlay">
+            <div class="profile-card__smile">🚀</div>
+            <div class="profile-card__additions">
+              <div class="profile-card__distance"></div>
+              <div class="profile-card__photos"></div>
+            </div>
+          </div>
+        </div>
+        <div class="profile-card__content">
+          <div class="profile-card__info">
+            <h3 class="profile-card__name"></h3>
+            <span class="profile-card__status"></span>
+          </div>
+          <p class="profile-card__location"></p>
+        </div>
+      </div>
+    </template>
+
+    <!-- Scripts -->
+    <script src="./js/libraries/jquery-3.7.1.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>

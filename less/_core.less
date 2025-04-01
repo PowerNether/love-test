@@ -1,0 +1,16 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+
+  @media screen and (max-width: @md) {
+    padding-bottom: calc(@gutters * 2 + 28px);
+  }
+}
+
+.wrapper {
+  width: 100%;
+  max-width: calc(1056px + (@gutters * 2));
+
+  padding: 0 @gutters;
+  margin: 0 auto;
+}

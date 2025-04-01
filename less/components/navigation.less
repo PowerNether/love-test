@@ -1,0 +1,48 @@
+.navigation {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 24px @gutters;
+
+  background-color: #fff;
+
+  @media screen and (min-width: @md) {
+    display: none;
+  }
+
+  &__icon {
+    display: block;
+
+    width: 28px;
+    height: 28px;
+
+    background-color: #4a69bd;
+    &-like {
+      -webkit-mask: url("../assets/icons/like.svg") center / cover no-repeat;
+      mask: url("../assets/icons/like.svg") center / cover no-repeat;
+    }
+    &-chat {
+      -webkit-mask: url("../assets/icons/chat.svg") center / cover no-repeat;
+      mask: url("../assets/icons/chat.svg") center / cover no-repeat;
+    }
+    &-wallet {
+      -webkit-mask: url("../assets/icons/wallet.svg") center / cover no-repeat;
+      mask: url("../assets/icons/wallet.svg") center / cover no-repeat;
+    }
+    &-search {
+      -webkit-mask: url("../assets/icons/search.svg") center / cover no-repeat;
+      mask: url("../assets/icons/search.svg") center / cover no-repeat;
+    }
+    &-close {
+      -webkit-mask: url("../assets/icons/close.svg") center / cover no-repeat;
+      mask: url("../assets/icons/close.svg") center / cover no-repeat;
+    }
+  }
+}

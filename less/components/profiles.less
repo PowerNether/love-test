@@ -1,0 +1,42 @@
+.profiles {
+  // Header
+  &__header {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 32px 0;
+  }
+  &__title {
+    font-size: 21px;
+    line-height: normal;
+  }
+  &__filter {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  // Grids
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @media screen and (max-width: @lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: @sm) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    @media screen and (max-width: @xs) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
